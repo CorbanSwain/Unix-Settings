@@ -19,14 +19,13 @@ shopt -u promptvars
 PROMPT_COMMAND=update_PS1
 export PS1
 
-
-# scripts directory (also under source control)
-SCRIPTS_DIR="~/shell_scripts"
+SETTINGS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPTS_DIR=$SETTINGS_DIR/shell_scripts
 
 # Aliases
 alias apti="sudo apt-get install"
 alias openmind="ssh c_swain@openmind7.mit.edu"
-alias ebashrc="emacs ~/.bashrc_ext && source ~/.bashrc"
+alias ebashrc="emacs $SETTINGS_DIR/.bashrc; source ~/.bashrc &"
 alias sbashrc="source ~/.bashrc"
 alias pip="pip3"
 alias py="python3.6"
@@ -34,6 +33,7 @@ alias py2="python2"
 alias la="ls -a"
 alias ll="ls -l"
 alias jnb="jupyter notebook"
+alias cdr="cd $REPO_DIRECTORY"
 
 # Glob Scripts
 alias gbmv="bash $SCRIPTS_DIR/globmv.sh"

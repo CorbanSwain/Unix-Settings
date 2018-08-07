@@ -1,0 +1,5 @@
+(package-initialize)
+(load "{{.emacs}}")
+(load "{{.emacs_local}}")
+(setq custom-file "{{.emacs_local}}")
+(load custom-file)
