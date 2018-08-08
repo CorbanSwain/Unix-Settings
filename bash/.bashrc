@@ -11,7 +11,7 @@ RED='\[\e[1;31m\]'
 PURPLE='\[\e[1;35m\]'
 ENDCOLOR='\[\e[0m\]'
 update_PS1() {
-  PS1="$GRAY> $CYAN\u$GRAY@$PURPLE\h $GRAY: $YELLOW\W$RED$(parse_git_branch)"
+  PS1="$GRAY> $CYAN\u$GRAY@$CYAN\h $GRAY: $YELLOW\W$RED$(parse_git_branch)"
   PS1="$PS1\n"
   PS1="$PS1$GRAY\$ $ENDCOLOR"
 }
@@ -19,14 +19,13 @@ shopt -u promptvars
 PROMPT_COMMAND=update_PS1
 export PS1
 
-# scripts directory (also under source control)
 SETTINGS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SCRIPTS_DIR=$SETTINGS_DIR/shell_scripts
 
 # Aliases
 alias apti="sudo apt-get install"
 alias openmind="ssh c_swain@openmind7.mit.edu"
-alias ebashrc="emacs $REPO_DIRECTORY/unix_settings/.bashrc; source ~/.bashrc &"
+alias ebashrc="emacs $SETTINGS_DIR/.bashrc; source ~/.bashrc &"
 alias sbashrc="source ~/.bashrc"
 alias pip="pip3"
 alias py="python3.6"
