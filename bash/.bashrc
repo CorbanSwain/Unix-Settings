@@ -25,7 +25,9 @@ SCRIPTS_DIR=$SETTINGS_DIR/shell_scripts
 # Aliases
 alias apti="sudo apt-get install"
 alias openmind="ssh c_swain@openmind7.mit.edu"
-alias ebashrc="emacs $SETTINGS_DIR/.bashrc; source ~/.bashrc &"
+alias athena="ssh c_swain@athana.dialup.mit.edu"
+alias ebashvc="emacs $SETTINGS_DIR/.bashrc; source ~/.bashrc &"
+alias ebashrc="emacs ~/.bashrc_local.sh; source ~/.bashrc &"
 alias sbashrc="source ~/.bashrc"
 alias pip="pip3"
 alias py="python3.6"
@@ -34,6 +36,7 @@ alias la="ls -a"
 alias ll="ls -l"
 alias jnb="jupyter notebook"
 alias cdr="cd $REPO_DIRECTORY"
+
 
 # Glob Scripts
 alias gbmv="bash $SCRIPTS_DIR/globmv.sh"
